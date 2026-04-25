@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: lexiclue
+    runtime: docker
+    plan: free
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false   # you set this manually in the Render dashboard
+      - key: PORT
+        value: 8080
+    healthCheckPath: /health
